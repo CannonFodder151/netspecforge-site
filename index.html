@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NetSpecForge — Design it. Size it. Prove it.</title>
+<meta name="description" content="NetSpecForge is licensed on-premises network-engineering software: design, size, validate, diagnose and document networks in one deterministic workspace. Design it. Size it. Prove it.">
+<link rel="canonical" href="https://netspecforge.perfection-it.com/">
+<meta name="theme-color" content="#0B1B33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NetSpecForge">
+<meta property="og:title" content="NetSpecForge — Design it. Size it. Prove it.">
+<meta property="og:description" content="The engineering workspace for networks that have to work. Design, size, validate, diagnose and document — on your own infrastructure.">
+<meta property="og:url" content="https://netspecforge.perfection-it.com/">
+<meta property="og:image" content="https://netspecforge.perfection-it.com/favicon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="netspecforge.perfection-it.com">
+<meta name="twitter:title" content="NetSpecForge — Design it. Size it. Prove it.">
+<meta name="twitter:description" content="KNOW BEFORE YOU DEPLOY. Licensed on-premises network engineering software for Windows, Ubuntu and Debian.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="container header-inner">
+    <div class="brand-block">
+      <a class="brand" href="/" aria-label="NetSpecForge home">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="6" fill="#0B1B33"/>
+          <path d="M8 22 L16 9 L24 22 Z" fill="none" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="16" cy="9" r="2.6" fill="#2563EB"/>
+          <circle cx="8" cy="22" r="2.6" fill="#FFFFFF"/>
+          <circle cx="24" cy="22" r="2.6" fill="#FFFFFF"/>
+        </svg>
+        <span class="wordmark">NetSpecForge</span>
+      </a>
+      <p class="parent">A product of <a href="https://perfection-it.com" rel="noopener">Perfection IT Services</a></p>
+    </div>
+    <nav class="primary" aria-label="Primary">
+      <ul>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#size">Size</a></li>
+        <li><a href="#validate">Validate</a></li>
+        <li><a href="#diagnose">Diagnose</a></li>
+        <li><a href="#report">Report</a></li>
+        <li><a href="#integrity">Integrity</a></li>
+        <li><a href="#get">Get</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#get">Download Free</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Licensed on-premises software for network engineers</p>
+      <h1>Design it. Size it. Prove it.</h1>
+      <p class="sub">The engineering workspace for networks that have to work.</p>
+      <p class="valueprop">KNOW BEFORE YOU DEPLOY</p>
+      <p class="positioning">Stop designing networks in one tool, calculating in another, reading vendor specifications in five browser tabs and writing the report somewhere else. NetSpecForge brings network design, sizing, validation and documentation into one engineering workspace.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#get">Download Free</a>
+        <a class="btn btn-ghost" href="#validate">See the validation engine</a>
+      </div>
+      <ul class="platform-strip" aria-label="Platform and deployment facts">
+        <li><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><rect x="1" y="1" width="10" height="10" fill="#2563EB"/></svg>Installs on Windows, Ubuntu and Debian</li>
+        <li><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><rect x="1" y="1" width="10" height="10" fill="#2563EB"/></svg>Data stays on your infrastructure</li>
+        <li><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><rect x="1" y="1" width="10" height="10" fill="#2563EB"/></svg>Only online component: licence activation server</li>
+        <li><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><rect x="1" y="1" width="10" height="10" fill="#2563EB"/></svg>Free download; licence required to activate</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="design" aria-labelledby="design-h">
+    <div class="container">
+      <p class="kicker">01 — Design</p>
+      <h2 id="design-h">A structured topology, not a drawing</h2>
+      <p class="lede">Every network is modelled as structured data. Connections terminate on real interfaces, so the design cannot quietly drift from the network that gets built.</p>
+      <div class="feature">
+        <div>
+          <dl class="spec">
+            <dt>Real interfaces</dt>
+            <dd>Every link names both endpoints as <span class="mono">device.port → device.port</span>. Dangling and unterminated links are rejected, not drawn over.</dd>
+            <dt>Structured model</dt>
+            <dd>Devices, interfaces, links, VLANs and subnets are typed objects with relationships — not free-form shapes on a canvas.</dd>
+            <dt>Hardware library</dt>
+            <dd>Verified manufacturer specifications with source provenance. Every spec cites the source document and revision it came from; nothing is typed from memory.</dd>
+            <dt>Provenance</dt>
+            <dd>Each value carries its source: datasheet, vendor portal, or engineer measurement — so reviewers can check the chain.</dd>
+          </dl>
+        </div>
+        <div class="panel">
+          <h3>Link record — example</h3>
+          <dl class="spec">
+            <dt>Link ID</dt><dd class="mono">L-0042</dd>
+            <dt>Endpoint A</dt><dd class="mono">core-sw-01.Eth1/0/1</dd>
+            <dt>Endpoint B</dt><dd class="mono">dist-sw-01.Eth1/0/48</dd>
+            <dt>Speed</dt><dd class="mono">10 Gbps (verified: datasheet rev. C)</dd>
+            <dt>Media</dt><dd class="mono">SFP+ DAC, 5 m — within 7 m spec</dd>
+            <dt>Status</dt><dd><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="size" aria-labelledby="size-h">
+    <div class="container">
+      <p class="kicker">02 — Size</p>
+      <h2 id="size-h">Deterministic calculations, every time</h2>
+      <p class="lede">Bandwidth, path, oversubscription, LACP, PoE and firewall sizing are computed from your inputs by fixed rules. The same inputs always produce the same numbers — and every output cites the inputs it used.</p>
+      <div class="table-wrap">
+        <table class="data">
+          <caption class="sr-only">Deterministic sizing calculations performed by NetSpecForge</caption>
+          <thead>
+            <tr><th scope="col">Calculation</th><th scope="col">Inputs</th><th scope="col">Output</th><th scope="col">Traceability</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bandwidth</td><td>Interface speeds, offered load per segment</td><td class="mono">Required capacity (Gbps)</td><td>Each output lists the exact inputs used</td></tr>
+            <tr><td>Oversubscription</td><td>Aggregate downlink vs uplink capacity</td><td class="mono">Ratio (n:1) vs policy ceiling</td><td>Policy document referenced; verdict issued</td></tr>
+            <tr><td>LACP</td><td>Member count, member speed, hash policy</td><td class="mono">Effective capacity; worst-case member loss</td><td>Single-member-failure case computed explicitly</td></tr>
+            <tr><td>PoE</td><td>Per-port class budget, port count, PSU reserve</td><td class="mono">Watts required vs budget; headroom %</td><td>IEEE class table cited per device</td></tr>
+            <tr><td>Firewall sizing</td><td>Session count, throughput, ruleset size</td><td class="mono">Required CPS and throughput; headroom</td><td>Vendor benchmark labelled as benchmark</td></tr>
+            <tr><td>Path capacity</td><td>End-to-end link capacities along a route</td><td class="mono">Bottleneck link + utilisation %</td><td>Worst link identified by ID, not by guess</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note"><strong>Unknown inputs stay UNKNOWN.</strong> If a value is missing, the calculation reports what it cannot compute — it never substitutes a guess. See <a href="#integrity">engineering integrity</a>.</p>
+    </div>
+  </section>
+
+  <section id="validate" aria-labelledby="validate-h">
+    <div class="container">
+      <p class="kicker">03 — Validate</p>
+      <h2 id="validate-h">Twenty named rules. Four honest verdicts.</h2>
+      <p class="lede">Every design is checked against validation rules NET-001 through NET-020. Each rule returns one of four verdicts, and the verdict is always stated in words — colour is never the only indicator.</p>
+
+      <div class="panel legend" aria-label="Verdict definitions">
+        <h3>Verdicts</h3>
+        <ul class="verdict-list">
+          <li><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span> Requirement met with margin.</li>
+          <li><span class="chip chip-warning"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 11 10 H1 Z" fill="none" stroke="#D97706" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 4.4 v2.6" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="8.6" r="0.9" fill="#D97706"/></svg>WARNING</span> Met, but within policy tolerance of the limit.</li>
+          <li><span class="chip chip-fail"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 2.5 9.5 9.5 M9.5 2.5 2.5 9.5" stroke="#DC2626" stroke-width="1.8" stroke-linecap="round"/></svg>FAIL</span> Requirement violated; must be fixed before deployment.</li>
+          <li><span class="chip chip-insufficient"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 a4.5 4.5 0 1 1 0 9 a4.5 4.5 0 1 1 0 -9" fill="none" stroke="#475569" stroke-width="1.5"/><path d="M5.4 4.4 a.7 .7 0 1 1 .9.9 c-.3.2-.5.4-.5.9" fill="none" stroke="#475569" stroke-width="1.4" stroke-linecap="round"/><circle cx="5.9" cy="8.4" r="0.8" fill="#475569"/></svg>INSUFFICIENT DATA</span> Required input missing; nothing is assumed.</li>
+        </ul>
+      </div>
+
+      <h3 class="subhead">Validation rules</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <caption class="sr-only">The twenty NetSpecForge validation rules with example verdicts</caption>
+          <thead>
+            <tr><th scope="col">Rule</th><th scope="col">Checks for</th><th scope="col">Example verdict</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="rule">NET-001</td><td>Link speed consistency across LAG members</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-002</td><td>Oversubscription within policy ceiling</td><td><span class="chip chip-warning"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 11 10 H1 Z" fill="none" stroke="#D97706" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 4.4 v2.6" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="8.6" r="0.9" fill="#D97706"/></svg>WARNING — 2.9:1 vs 3:1 ceiling</span></td></tr>
+            <tr><td class="rule">NET-003</td><td>PoE budget headroom per switch</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-004</td><td>Firewall session and throughput sizing</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-005</td><td>End-to-end path capacity (bottleneck)</td><td><span class="chip chip-warning"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 11 10 H1 Z" fill="none" stroke="#D97706" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 4.4 v2.6" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="8.6" r="0.9" fill="#D97706"/></svg>WARNING — worst link at 62%</span></td></tr>
+            <tr><td class="rule">NET-006</td><td>MTU consistency along the path</td><td><span class="chip chip-warning"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 11 10 H1 Z" fill="none" stroke="#D97706" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 4.4 v2.6" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="8.6" r="0.9" fill="#D97706"/></svg>WARNING — one hop at 1500 vs 9000</span></td></tr>
+            <tr><td class="rule">NET-007</td><td>Redundant path availability (no SPOF)</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-008</td><td>LACP fall-back configuration</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-009</td><td>VLAN ID uniqueness per segment</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-010</td><td>Subnet overlap between segments</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-011</td><td>Routing adjacency feasibility</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-012</td><td>Transceiver and reach compatibility</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-013</td><td>Cable length within specification</td><td><span class="chip chip-insufficient"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 a4.5 4.5 0 1 1 0 9 a4.5 4.5 0 1 1 0 -9" fill="none" stroke="#475569" stroke-width="1.5"/><path d="M5.4 4.4 a.7 .7 0 1 1 .9.9 c-.3.2-.5.4-.5.9" fill="none" stroke="#475569" stroke-width="1.4" stroke-linecap="round"/><circle cx="5.9" cy="8.4" r="0.8" fill="#475569"/></svg>INSUFFICIENT DATA — lengths not recorded</span></td></tr>
+            <tr><td class="rule">NET-014</td><td>STP loop prevention on access ports</td><td><span class="chip chip-fail"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 2.5 9.5 9.5 M9.5 2.5 2.5 9.5" stroke="#DC2626" stroke-width="1.8" stroke-linecap="round"/></svg>FAIL — 6 access ports without loop guard</span></td></tr>
+            <tr><td class="rule">NET-015</td><td>ACL shadowed-rule detection</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-016</td><td>Control-plane CPU headroom</td><td><span class="chip chip-insufficient"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 a4.5 4.5 0 1 1 0 9 a4.5 4.5 0 1 1 0 -9" fill="none" stroke="#475569" stroke-width="1.5"/><path d="M5.4 4.4 a.7 .7 0 1 1 .9.9 c-.3.2-.5.4-.5.9" fill="none" stroke="#475569" stroke-width="1.4" stroke-linecap="round"/><circle cx="5.9" cy="8.4" r="0.8" fill="#475569"/></svg>INSUFFICIENT DATA — no CPU baseline</span></td></tr>
+            <tr><td class="rule">NET-017</td><td>HA failover capacity (N+1)</td><td><span class="chip chip-fail"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 2.5 9.5 9.5 M9.5 2.5 2.5 9.5" stroke="#DC2626" stroke-width="1.8" stroke-linecap="round"/></svg>FAIL — failover exceeds remaining capacity</span></td></tr>
+            <tr><td class="rule">NET-018</td><td>Management access path exists</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-019</td><td>QoS policy matches offered traffic classes</td><td><span class="chip chip-pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 4.8 9 10 3.2" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PASS</span></td></tr>
+            <tr><td class="rule">NET-020</td><td>Documentation completeness — assumptions recorded</td><td><span class="chip chip-insufficient"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 a4.5 4.5 0 1 1 0 9 a4.5 4.5 0 1 1 0 -9" fill="none" stroke="#475569" stroke-width="1.5"/><path d="M5.4 4.4 a.7 .7 0 1 1 .9.9 c-.3.2-.5.4-.5.9" fill="none" stroke="#475569" stroke-width="1.4" stroke-linecap="round"/><circle cx="5.9" cy="8.4" r="0.8" fill="#475569"/></svg>INSUFFICIENT DATA — 2 assumptions unrecorded</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subhead">End-to-end path analysis</h3>
+      <p class="lede">Follow a flow across the topology and the worst link on the path is computed and highlighted — by ID and by number, not by eye.</p>
+      <div class="panel">
+        <svg class="diagram" viewBox="0 0 680 210" role="img" aria-labelledby="pathTitle pathDesc">
+          <title id="pathTitle">End-to-end path analysis</title>
+          <desc id="pathDesc">Path from core switch A through distribution switch B to access switch C. The link from B to C at 2.5 Gbps is highlighted as the bottleneck at 62 percent utilisation.</desc>
+          <line x1="150" y1="80" x2="280" y2="80" class="svg-link"/>
+          <line x1="400" y1="80" x2="530" y2="80" class="svg-bottleneck"/>
+          <text x="215" y="64" class="svg-muted" text-anchor="middle">10 Gbps</text>
+          <text x="465" y="64" class="svg-bottleneck-text" text-anchor="middle">2.5 Gbps</text>
+          <rect x="30" y="56" width="120" height="48" rx="6" class="svg-node"/>
+          <rect x="280" y="56" width="120" height="48" rx="6" class="svg-node"/>
+          <rect x="530" y="56" width="120" height="48" rx="6" class="svg-node"/>
+          <text x="90" y="85" class="svg-label" text-anchor="middle">CORE-A</text>
+          <text x="340" y="85" class="svg-label" text-anchor="middle">DIST-B</text>
+          <text x="590" y="85" class="svg-label" text-anchor="middle">ACCESS-C</text>
+          <rect x="372" y="118" width="186" height="30" rx="4" class="svg-flag"/>
+          <text x="465" y="137" class="svg-bottleneck-text" text-anchor="middle">BOTTLENECK — 62% utilisation</text>
+          <text x="340" y="180" class="svg-muted" text-anchor="middle">Path A → C · worst-case capacity 2.5 Gbps · 3 hops · 0 failures tolerated on this route</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="diagnose" aria-labelledby="diagnose-h">
+    <div class="container">
+      <p class="kicker">04 — Diagnose</p>
+      <h2 id="diagnose-h">Evidence first. Hypotheses second. Never mixed.</h2>
+      <p class="lede">The diagnostics workspace keeps observed evidence and engineer hypotheses in separate records. Failure-mode simulation shows what the network does when something breaks — before it breaks.</p>
+      <div class="feature">
+        <div class="panel">
+          <h3>Observed evidence</h3>
+          <ul class="tight mono-list">
+            <li><span class="mono">2026-10-05 09:41</span> — ifEth1/0/24: input errors 0, output drops 12 (SNMP)</li>
+            <li><span class="mono">2026-10-05 09:44</span> — measured throughput 2.31 Gbps (30 s test)</li>
+            <li><span class="mono">2026-10-05 09:47</span> — log: interface state change, port-channel member</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Hypotheses — unverified</h3>
+          <ul class="tight mono-list">
+            <li><span class="mono">H1</span> — oversubscription on access uplink · confidence: medium · not verified</li>
+            <li><span class="mono">H2</span> — NIC offload mismatch on edge host · confidence: low · not verified</li>
+          </ul>
+          <p class="panel-note">A hypothesis never enters the evidence record until independently verified.</p>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:24px">
+        <h3>Failure-mode simulation — example</h3>
+        <dl class="spec">
+          <dt>Simulated fault</dt><dd class="mono">Remove link DIST-B ↔ ACCESS-C</dd>
+          <dt>Recomputed path</dt><dd class="mono">DIST-B → CORE-A → DIST-D → ACCESS-C</dd>
+          <dt>New worst link</dt><dd class="mono">CORE-A → DIST-D at 71% utilisation</dd>
+          <dt>Result</dt><dd><span class="chip chip-warning"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5 11 10 H1 Z" fill="none" stroke="#D97706" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 4.4 v2.6" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="8.6" r="0.9" fill="#D97706"/></svg>WARNING — no FAIL introduced</span></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="report" aria-labelledby="report-h">
+    <div class="container">
+      <p class="kicker">05 — Report</p>
+      <h2 id="report-h">Professional, white-labelled PDF documents</h2>
+      <p class="lede">Produce a design document your client's reviewers can actually audit. Your logo, your cover, your colours — and the deterministic outputs embedded, not re-typed by hand.</p>
+      <div class="feature">
+        <div>
+          <ul class="tight">
+            <li><strong>Cover and branding</strong> — your logo and identity on every page.</li>
+            <li><strong>Topology diagrams</strong> — generated from the structured model, so they cannot disagree with the data.</li>
+            <li><strong>Calculation trace</strong> — every input → output pair, so any number can be re-derived.</li>
+            <li><strong>Validation results</strong> — NET-001…NET-020 with PASS / WARNING / FAIL / INSUFFICIENT DATA verdicts.</li>
+            <li><strong>Path analysis</strong> — bottlenecks identified by link ID and utilisation.</li>
+            <li><strong>Failure-mode simulation results</strong> — what was tested, what changed, what it means.</li>
+            <li><strong>Assumptions register</strong> — every UNKNOWN value listed, so nothing hides in prose.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Document metadata — example</h3>
+          <dl class="spec">
+            <dt>Title</dt><dd>Campus core redesign — validation record</dd>
+            <dt>Generated by</dt><dd class="mono">NetSpecForge (on-premises instance)</dd>
+            <dt>Model revision</dt><dd class="mono">r.118</dd>
+            <dt>Rules applied</dt><dd class="mono">NET-001 … NET-020</dd>
+            <dt>Verdicts</dt><dd class="mono">12 PASS · 3 WARNING · 2 FAIL · 3 INSUFFICIENT DATA</dd>
+            <dt>Branding</dt><dd>Client white-label — no NetSpecForge watermark</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="integrity" aria-labelledby="integrity-h">
+    <div class="container">
+      <p class="kicker">Engineering integrity</p>
+      <h2 id="integrity-h">The tool must never be the source of a lie</h2>
+      <p class="lede">Three rules the engine enforces on itself, on every calculation and every report.</p>
+      <div class="cards">
+        <div class="panel">
+          <h3>UNKNOWN is an answer</h3>
+          <p>NetSpecForge never invents specifications. If a value is not in the model or its source, the result is UNKNOWN — stated plainly — instead of a plausible guess.</p>
+        </div>
+        <div class="panel">
+          <h3>Benchmarks are labelled</h3>
+          <p>Manufacturer benchmarks are quoted with their source and are never presented as guaranteed real-world performance. The distinction is printed on the page.</p>
+        </div>
+        <div class="panel">
+          <h3>AI explains; it never calculates</h3>
+          <p>Every number is produced by deterministic rules. AI assistance only explains those results in plain language — it does not compute, estimate or adjust them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="get" aria-labelledby="get-h">
+    <div class="container">
+      <p class="kicker">Get NetSpecForge</p>
+      <h2 id="get-h">Download Free</h2>
+      <p class="lede">Free download; a NetSpecForge licence is required to activate. Installs and runs on your own Windows, Ubuntu or Debian infrastructure.</p>
+      <div class="cards">
+        <div class="panel">
+          <h3>Windows</h3>
+          <dl class="spec">
+            <dt>Platforms</dt><dd>Windows 10 / 11 (x64), Windows Server 2019 and later</dd>
+            <dt>Package</dt><dd>Installer (.exe)</dd>
+          </dl>
+          <button class="btn btn-platform" type="button" disabled>Build not yet published</button>
+        </div>
+        <div class="panel">
+          <h3>Ubuntu</h3>
+          <dl class="spec">
+            <dt>Platforms</dt><dd>Ubuntu 22.04 LTS / 24.04 LTS (x64)</dd>
+            <dt>Package</dt><dd>Debian package (.deb)</dd>
+          </dl>
+          <button class="btn btn-platform" type="button" disabled>Build not yet published</button>
+        </div>
+        <div class="panel">
+          <h3>Debian</h3>
+          <dl class="spec">
+            <dt>Platforms</dt><dd>Debian 12 / 13 (x64)</dd>
+            <dt>Package</dt><dd>Debian package (.deb)</dd>
+          </dl>
+          <button class="btn btn-platform" type="button" disabled>Build not yet published</button>
+        </div>
+      </div>
+      <p class="note"><strong>No build has been published yet.</strong> The first public build is in preparation, so there is no download today and no version number to quote. When it is ready, the download will appear on this page first. Activation requires a NetSpecForge licence and our licence activation server — the only component that ever goes online. After activation, all of your data stays on your infrastructure.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-brand">NetSpecForge is a product of <a href="https://perfection-it.com" rel="noopener">Perfection IT Services</a> — cybersecurity &amp; network consulting.</p>
+    <p><a href="https://perfection-it.com" rel="noopener">https://perfection-it.com</a> · ABN 25 839 782 423</p>
+    <p class="fine">© 2026 Perfection IT Services. NetSpecForge is licensed on-premises software. Design it. Size it. Prove it.</p>
+  </div>
+</footer>
+
+</body>
+</html>
