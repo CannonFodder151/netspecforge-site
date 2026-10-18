@@ -59,7 +59,7 @@ if you want a different one.
 
 ## Notes
 
-- The "Download Free" CTA is an honest placeholder: it anchors to the `#get`
+- The "Get NetSpecForge" CTA is an honest placeholder: it anchors to the `#get`
   section, which explains the Windows / Ubuntu / Debian builds. No fake
   download URLs or version numbers exist anywhere in the site.
 - Status colours are always paired with a text label (PASS / WARNING / FAIL /
