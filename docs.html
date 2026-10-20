@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation | NetSpecForge</title>
+<meta name="description" content="Learn how to design, size and validate networks with NetSpecForge. Getting started, validation rules NET-001..020, calculators, reports, license activation, troubleshooting.">
+<style>
+:root{
+  --navy:#0B1B33;
+  --navy-2:#0f2140;
+  --blue:#2563EB;
+  --blue-light:#3B82F6;
+  --text:#E8ECF4;
+  --muted:#9BA8C8;
+  --glass:rgba(255,255,255,0.06);
+  --glass-hover:rgba(255,255,255,0.10);
+  --glass-border:rgba(255,255,255,0.12);
+  --code-bg:#0e172a;
+  --code-border:rgba(255,255,255,0.10);
+  --ok:#10b981;
+  --warn:#f59e0b;
+  --bad:#ef4444;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--navy);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--blue);color:#fff;padding:10px 16px;text-decoration:none;font-weight:600;border-radius:4px;
+}
+.skip:focus{left:8px;top:8px}
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,27,51,0.75);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;flex-wrap:wrap;gap:12px;
+}
+.nav-brand{font-weight:700;font-size:18px;color:#fff}
+.nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center;list-style:none}
+.nav-links a{font-size:14px;color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a:focus-visible{color:#fff}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:20px;cursor:pointer;padding:6px}
+.hamburger:focus-visible{outline:2px solid var(--blue);border-radius:4px}
+.btn-ghost{background:rgba(255,255,255,0.06);color:#fff;padding:8px 16px;border-radius:8px;font-weight:600;border:1px solid var(--glass-border)}
+.btn-ghost:hover{border-color:var(--blue)}
+.btn-primary{background:var(--blue);color:#fff;padding:8px 16px;border-radius:8px;font-weight:600;border:none}
+.btn-primary:hover{background:#1d4ed8}
+.btn-outline{background:transparent;color:#fff;padding:8px 16px;border-radius:8px;font-weight:600;border:1px solid var(--glass-border)}
+.btn-outline:hover{border-color:var(--blue)}
+.hero{
+  text-align:center;padding:80px 24px 40px;
+  background:radial-gradient(ellipse at top,rgba(37,99,235,0.25),transparent 60%);
+}
+.hero h1{font-size:clamp(32px,6vw,56px);font-weight:800;letter-spacing:-0.5px}
+.hero p{color:var(--muted);font-size:18px;margin-top:12px;max-width:600px;margin-inline:auto}
+main{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:56px 24px}
+h2{font-size:clamp(24px,4vw,36px);font-weight:700;letter-spacing:-0.2px;margin-bottom:8px}
+.section-sub{color:var(--muted);font-size:16px;margin-bottom:32px;max-width:62ch}
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border:1px solid var(--glass-border);
+  border-radius:14px;
+  padding:24px;
+}
+.step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.step{
+  background:var(--glass-hover);border:1px solid var(--glass-border);border-radius:10px;padding:18px 16px;
+}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;margin-bottom:10px}
+.step h4{font-size:15px;margin-bottom:6px}
+.step p{font-size:13px;color:var(--muted)}
+h3{font-size:clamp(18px,3vw,22px);font-weight:600;margin-top:24px;margin-bottom:10px;color:var(--blue-light)}
+p{color:var(--muted);margin-bottom:10px;max-width:68ch}
+ul{color:var(--muted);margin-bottom:12px;padding-left:20px;max-width:68ch}
+li{margin-bottom:6px}
+.code{
+  background:var(--code-bg);border:1px solid var(--code-border);border-radius:10px;padding:16px;margin-top:12px;
+  overflow-x:auto;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;line-height:1.45;
+  position:relative;
+}
+.code pre{margin:0;color:#d1d5fa}
+.code .hl-key{color:#c678dd}
+.code .hl-str{color:#98c379}
+.code .hl-num{color:#d19a66}
+.code .hl-fn{color:#61afef}
+.code .hl-com{color:#5c6370;font-style:italic}
+.copy-btn{
+  position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.10);border:1px solid var(--glass-border);
+  color:#fff;border-radius:6px;padding:4px 8px;font-size:12px;cursor:pointer;font-family:inherit;
+}
+.copy-btn:hover{background:rgba(37,99,235,0.35)}
+.note{
+  border-left:3px solid var(--blue);background:rgba(37,99,235,0.08);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;font-size:14px;color:var(--muted);
+}
+.warn-box{border-left-color:var(--warn);background:rgba(245,158,11,0.08)}
+.kbd{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;background:var(--glass-hover);border:1px solid var(--glass-border);border-radius:5px;font-size:12px;font-weight:600;padding:0 6px;color:#fff}
+footer{border-top:1px solid var(--glass-border);padding:40px 24px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:640px){
+  .hamburger{display:block}
+  .nav-links{position:absolute;top:100%;left:0;right:0;background:rgba(11,27,51,0.95);backdrop-filter:blur(12px);flex-direction:column;padding:16px 24px;gap:10px;border-top:1px solid var(--glass-border);max-height:0;overflow:hidden;transition:max-height .25s}
+  .nav-links.open{max-height:400px}
+  .hero{padding:64px 20px 32px}
+  .hero h1{font-size:32px}
+  section{padding:40px 20px}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *, *::before, *::after{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav aria-label="Primary navigation">
+  <a class="nav-brand" href="index.html">NetSpecForge</a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="docs.html" aria-current="page">Docs</a></li>
+    <li><a href="signin.html" class="btn-ghost">Sign In</a></li>
+    <li><a href="signup.html" class="btn-primary">Sign Up</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <h1>Documentation</h1>
+  <p>Learn how to design, size and validate with NetSpecForge.</p>
+</header>
+
+<main id="main">
+  <section id="getting-started">
+    <h2>Getting Started</h2>
+    <p class="section-sub">Create a project, add devices, and build your topology.</p>
+    <div class="glass">
+      <div class="step-grid">
+        <article class="step">
+          <span class="num">1</span>
+          <h4>Create a project</h4>
+          <p>Open NetSpecForge, select <kbd>New Project</kbd>, enter a name and choose a template (Enterprise, Campus, or Datacenter).</p>
+        </article>
+        <article class="step">
+          <span class="num">2</span>
+          <h4>Add devices</h4>
+          <p>Drag switches, routers, firewalls, and access points from the device library onto the canvas. Set VLANs, ports, and PoE requirements per device.</p>
+        </article>
+        <article class="step">
+          <span class="num">3</span>
+          <h4>Build topology</h4>
+          <p>Connect devices with links. Assign link speeds (1G, 10G, 25G, 100G), then run the topology checker to validate cabling and addressing.</p>
+        </article>
+      </div>
+      <div class="code" id="code-1"><pre><span class="hl-com"># netspecforge project init --template enterprise --name HQ-Campus</span>
+<span class="hl-fn">netspecforge</span> project create HQ-Campus --template enterprise
+<span class="hl-fn">netspecforge</span> device add --type switch --name SW-01 --vlans 10,20,30
+<span class="hl-fn">netspecforge</span> link add --from SW-01 --to SW-02 --speed 10G</pre>
+<button class="copy-btn" onclick="copyCode('code-1')">Copy</button></div>
+      <div class="note">Tip: Use the built-in <kbd>Auto-address</kbd> tool to assign subnets automatically before validation.</div>
+    </div>
+  </section>
+
+  <section id="running-validation">
+    <h2>Running Validation</h2>
+    <p class="section-sub">Run the built-in NET-001..020 rule set against your topology.</p>
+    <div class="glass">
+      <div class="step-grid">
+        <article class="step">
+          <span class="num">1</span>
+          <h4>Open validation</h4>
+          <p>Select <kbd>Validate</kbd> from the toolbar or press <kbd>Ctrl</kbd>+<kbd>R</kbd>. Choose the rule pack (default: <span class="kbd">NET-001..020</span>).</p>
+        </article>
+        <article class="step">
+          <span class="num">2</span>
+          <h4>Run the rules</h4>
+          <p>Click <kbd>Run</kbd>. NetSpecForge checks addressing, VLAN consistency, spanning-tree, PoE budget, bandwidth headroom, and firewall policy.</p>
+        </article>
+        <article class="step">
+          <span class="num">3</span>
+          <h4>Review findings</h4>
+          <p>Each finding shows severity, rule ID, affected device, and a suggested fix. Filter by <span class="kbd">Pass / Warn / Fail</span> or jump to a device on the canvas.</p>
+        </article>
+      </div>
+      <div class="code" id="code-2"><pre><span class="hl-com"># Run the full NET-001..020 rule set</span>
+<span class="hl-fn">netspecforge</span> validate --rules NET-001..020 --project HQ-Campus --format json &gt; results.json
+
+<span class="hl-com"># Exit codes: 0 = pass, 1 = warnings, 2 = failures</span>
+<span class="hl-fn">netspecforge</span> validate --rules NET-001..020 --project HQ-Campus || <span class="hl-num">echo</span> "Validation failed"</pre>
+<button class="copy-btn" onclick="copyCode('code-2')">Copy</button></div>
+      <div class="note warn-box">Rule coverage spans NET-001 (addressing) through NET-020 (failover). Warnings do not block export; failures do.</div>
+    </div>
+  </section>
+
+  <section id="calculators">
+    <h2>Calculators</h2>
+    <p class="section-sub">Subnet, bandwidth, PoE, and firewall sizing tools.</p>
+    <div class="glass">
+      <div class="step-grid">
+        <article class="step">
+          <span class="num">1</span>
+          <h4>Subnet / VLSM</h4>
+          <p>Enter a network and required host counts per subnet. Get optimal block allocation, wasted addresses, and summarization.</p>
+        </article>
+        <article class="step">
+          <span class="num">2</span>
+          <h4>Bandwidth</h4>
+          <p>Model per-link utilisation and headroom. Detect bottlenecks and oversubscribed links before they affect production.</p>
+        </article>
+        <article class="step">
+          <span class="num">3</span>
+          <h4>PoE budget</h4>
+          <p>Calculate power per switch port with redundancy margins. See headroom and overload warnings per device.</p>
+        </article>
+        <article class="step">
+          <span class="num">4</span>
+          <h4>Firewall sizing</h4>
+          <p>Right-size appliances from policy count, traffic model, and growth margin. Outputs recommended model and rule capacity.</p>
+        </article>
+      </div>
+      <div class="code" id="code-3"><pre><span class="hl-com"># Subnet calculator: 10.0.0.0/16 into 4 subnets</span>
+<span class="hl-fn">netspecforge</span> calc subnet --network 10.0.0.0/16 --hosts 500,250,120,60
+
+<span class="hl-com"># PoE budget: 48 ports, 30W each, 70% headroom</span>
+<span class="hl-fn">netspecforge</span> calc poe --ports 48 --per-port 30W --headroom 70</pre>
+<button class="copy-btn" onclick="copyCode('code-3')">Copy</button></div>
+      <div class="note">All calculators accept CLI flags, JSON input, or the GUI panels under <kbd>Tools &gt; Calculators</kbd>.</div>
+    </div>
+  </section>
+
+  <section id="reports">
+    <h2>Reports</h2>
+    <p class="section-sub">Generate audit-ready PDF reports and export SVG diagrams.</p>
+    <div class="glass">
+      <div class="step-grid">
+        <article class="step">
+          <span class="num">1</span>
+          <h4>Generate PDF</h4>
+          <p>Open <kbd>Reports</kbd>, select <kbd>PDF</kbd>, choose sections (topology, validation findings, calculator outputs), then click <kbd>Export</kbd>.</p>
+        </article>
+        <article class="step">
+          <span class="num">2</span>
+          <h4>Export SVG</h4>
+          <p>Select <kbd>SVG</kbd> to export a vector diagram. Crisp at any scale, suitable for architecture docs and design reviews.</p>
+        </article>
+        <article class="step">
+          <span class="num">3</span>
+          <h4>Schedule / automate</h4>
+          <p>Use the CLI to generate reports on a schedule or as part of a CI pipeline.</p>
+        </article>
+      </div>
+      <div class="code" id="code-4"><pre><span class="hl-com"># PDF report with validation findings</span>
+<span class="hl-fn">netspecforge</span> report --format pdf --project HQ-Campus --include findings,topology --out report.pdf
+
+<span class="hl-com"># SVG diagram export</span>
+<span class="hl-fn">netspecforge</span> report --format svg --project HQ-Campus --out topology.svg</pre>
+<button class="copy-btn" onclick="copyCode('code-4')">Copy</button></div>
+      <div class="note">PDF reports include rule findings with severity badges, making them audit-ready for compliance reviews.</div>
+    </div>
+  </section>
+
+  <section id="license-activation">
+    <h2>License Activation</h2>
+    <p class="section-sub">Activate a license key to unlock Pro or Enterprise features.</p>
+    <div class="glass">
+      <div class="step-grid">
+        <article class="step">
+          <span class="num">1</span>
+          <h4>Get a key</h4>
+          <p>Purchase a license at the licensing portal and copy your activation key from the order confirmation email.</p>
+        </article>
+        <article class="step">
+          <span class="num">2</span>
+          <h4>Open activation</h4>
+          <p>In NetSpecForge go to <kbd>Settings &gt; License</kbd> or click <kbd>Activate License</kbd> on the welcome screen.</p>
+        </article>
+        <article class="step">
+          <span class="num">3</span>
+          <h4>Activate</h4>
+          <p>Paste the key and click <kbd>Activate</kbd>. The product verifies the key online and unlocks your entitled tier.</p>
+        </article>
+      </div>
+      <div class="code" id="code-5"><pre><span class="hl-com"># Activate via CLI (offline-friendly)</span>
+<span class="hl-fn">netspecforge</span> license activate --key NSF-XXXX-XXXX-XXXX
+
+<span class="hl-com"># Check activation status</span>
+<span class="hl-fn">netspecforge</span> license status</pre>
+<button class="copy-btn" onclick="copyCode('code-5')">Copy</button></div>
+      <div class="note">Keys are tied to your organisation. Deactivate before moving to a new machine: <kbd>netspecforge license deactivate</kbd>.</div>
+    </div>
+  </section>
+
+  <section id="troubleshooting">
+    <h2>Troubleshooting</h2>
+    <p class="section-sub">Common issues and fixes.</p>
+    <div class="glass">
+      <table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:10px;">
+        <thead>
+          <tr style="text-align:left;border-bottom:1px solid var(--glass-border);">
+            <th style="padding:10px;color:var(--muted)">Issue</th>
+            <th style="padding:10px;color:var(--muted)">Fix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--glass-border);">
+            <td style="padding:10px;color:var(--text)">Validation rules not running</td>
+            <td style="padding:10px;color:var(--muted)">Ensure a topology exists and devices have IP/VLAN config. Run <kbd>Auto-address</kbd> first.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--glass-border);">
+            <td style="padding:10px;color:var(--text)">PDF export fails</td>
+            <td style="padding:10px;color:var(--muted)">Check you have write permission to the output folder, or reduce report sections and retry.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--glass-border);">
+            <td style="padding:10px;color:var(--text)">License key rejected</td>
+            <td style="padding:10px;color:var(--muted)">Verify the key matches your purchased tier and has not been activated on another machine. Deactivate elsewhere first.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--glass-border);">
+            <td style="padding:10px;color:var(--text)">PoE over-budget warning</td>
+            <td style="padding:10px;color:var(--muted)">Reduce PoE device count, add a higher-capacity switch, or enable redundant power supplies for headroom.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--glass-border);">
+            <td style="padding:10px;color:var(--text)">Link shows as down</td>
+            <td style="padding:10px;color:var(--muted)">Confirm link speed/duplex match on both ends and that the cable type supports the distance.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note warn-box" style="margin-top:16px">Still stuck? Export your topology (<kbd>SVG</kbd>) and validation JSON, then attach them to a support ticket at support@netspecforge.com.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 NetSpecForge. All rights reserved.
+</footer>
+
+<script>
+  const ham = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  ham.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    ham.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+  }));
+
+  function copyCode(id) {
+    const block = document.getElementById(id);
+    const text = block.querySelector('pre').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = block.querySelector('.copy-btn');
+      const old = btn.textContent;
+      btn.textContent = 'Copied';
+      setTimeout(() => { btn.textContent = old; }, 1600);
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        const el = document.querySelector(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+    });
+  });
+</script>
+</body>
+</html>

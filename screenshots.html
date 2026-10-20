@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Screenshots | NetSpecForge</title>
+<meta name="description" content="See NetSpecForge in action - screenshots of the network specification platform.">
+<style>
+:root{
+  --navy:#0B1B33;
+  --blue:#2563EB;
+  --text:#E8ECF4;
+  --muted:#9BA8C8;
+  --glass:rgba(255,255,255,0.06);
+  --glass-border:rgba(255,255,255,0.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--navy);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,27,51,0.75);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;flex-wrap:wrap;gap:12px;
+}
+.nav-brand{font-weight:700;font-size:18px;color:#fff}
+.nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.nav-links a{font-size:14px;color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a:focus-visible{color:#fff}
+.nav-cta{background:var(--blue);color:#fff;padding:8px 16px;border-radius:8px;font-weight:600}
+.nav-cta:hover{background:#1d4ed8}
+.hero{
+  text-align:center;padding:80px 24px 40px;
+  background:radial-gradient(ellipse at top,rgba(37,99,235,0.25),transparent 60%);
+}
+.hero h1{font-size:48px;font-weight:800;letter-spacing:-0.5px}
+.hero p{color:var(--muted);font-size:18px;margin-top:12px;max-width:600px;margin-inline:auto}
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border:1px solid var(--glass-border);
+  border-radius:16px;
+  padding:24px;
+}
+.gallery-section{max-width:1200px;margin:0 auto;padding:40px 24px}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  cursor:pointer;
+  transition:transform .2s,box-shadow .2s;
+  overflow:hidden;
+}
+.card:hover,.card:focus-visible{transform:translateY(-4px);box-shadow:0 12px 30px rgba(37,99,235,0.25)}
+.card:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.thumb{
+  aspect-ratio:16/10;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:40px;position:relative;overflow:hidden;
+}
+.thumb-label{
+  position:absolute;bottom:10px;left:10px;
+  background:rgba(0,0,0,0.5);padding:4px 10px;border-radius:6px;
+  font-size:12px;font-weight:600;backdrop-filter:blur(4px);
+}
+.card-body h3{margin:12px 0 4px;font-size:16px}
+.card-body p{color:var(--muted);font-size:13px}
+.lightbox{
+  position:fixed;inset:0;background:rgba(5,12,24,0.85);
+  backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;
+  z-index:100;padding:24px;
+}
+.lightbox.active{display:flex}
+.lightbox-content{
+  max-width:900px;width:100%;position:relative;
+}
+.lightbox-thumb{
+  aspect-ratio:16/10;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:64px;position:relative;
+}
+.lightbox-info{margin-top:16px;text-align:center}
+.lightbox-info h2{font-size:24px}
+.lightbox-info p{color:var(--muted);margin-top:8px}
+.lightbox-close{
+  position:absolute;top:-40px;right:0;
+  background:none;border:none;color:#fff;font-size:32px;cursor:pointer;
+  width:40px;height:40px;display:flex;align-items:center;justify-content:center;
+}
+.lightbox-close:focus-visible{outline:2px solid var(--blue);border-radius:4px}
+@media (max-width:640px){
+  .hero h1{font-size:32px}
+  .hero p{font-size:15px}
+  .gallery-grid{grid-template-columns:1fr}
+}
+footer{text-align:center;padding:40px 24px;color:var(--muted);font-size:13px;border-top:1px solid var(--glass-border)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+<nav aria-label="Primary navigation">
+  <a class="nav-brand" href="index.html">NetSpecForge</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="docs.html">Docs</a>
+    <a href="signin.html">Sign In</a>
+    <a class="nav-cta" href="signup.html">Sign Up</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Screenshots</h1>
+  <p>See NetSpecForge in action</p>
+</header>
+
+<main>
+<section class="gallery-section">
+  <div class="gallery-grid" id="gallery" role="list"></div>
+</section>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" aria-hidden="true">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lb-close" aria-label="Close screenshot">&times;</button>
+    <div class="lightbox-thumb" id="lb-thumb"></div>
+    <div class="lightbox-info">
+      <h2 id="lb-title"></h2>
+      <p id="lb-desc"></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 NetSpecForge. All rights reserved.
+</footer>
+
+<script>
+const shots=[
+  {label:"Dashboard",icon:"📊",desc:"Overview of projects, recent activity, and key metrics.",color:"linear-gradient(135deg,#1e3a8a,#2563EB)"},
+  {label:"Topology Canvas",icon:"🗺️",desc:"Interactive network topology editor with drag-and-drop nodes.",color:"linear-gradient(135deg,#0f766e,#14b8a6)"},
+  {label:"Validation Panel",icon:"✅",desc:"Real-time validation results with rule-by-rule breakdown.",color:"linear-gradient(135deg,#7c3aed,#a78bfa)"},
+  {label:"Inspector",icon:"🔍",desc:"Detailed property inspector for selected network elements.",color:"linear-gradient(135deg,#b45309,#f59e0b)"},
+  {label:"Hardware Library",icon:"🛠️",desc:"Searchable catalog of supported hardware and modules.",color:"linear-gradient(135deg,#0e7490,#22d3ee)"},
+  {label:"Reports",icon:"📄",desc:"Generate compliance and specification reports in one click.",color:"linear-gradient(135deg,#be123c,#f43f5e)"},
+  {label:"Calculators",icon:"🧮",desc:"Built-in engineering calculators for capacity and sizing.",color:"linear-gradient(135deg,#3f6212,#84cc16)"},
+  {label:"Settings",icon:"⚙️",desc:"Workspace, profile, and integration settings.",color:"linear-gradient(135deg,#475569,#94a3b8)"},
+  {label:"License Page",icon:"🔑",desc:"Manage license keys and activation status.",color:"linear-gradient(135deg,#7e22ce,#c084fc)"},
+  {label:"Team Page",icon:"👥",desc:"Invite members, assign roles, and manage permissions.",color:"linear-gradient(135deg,#1d4ed8,#60a5fa)"},
+  {label:"Workspace",icon:"🗂️",desc:"Project workspace with files, branches, and history.",color:"linear-gradient(135deg,#92400e,#fbbf24)"},
+  {label:"Design Page",icon:"🎨",desc:"Visual design surface for customizing templates.",color:"linear-gradient(135deg,#9d174d,#ec4899)"}
+];
+
+const gallery=document.getElementById('gallery');
+shots.forEach((s,i)=>{
+  const card=document.createElement('article');
+  card.className='glass card';
+  card.setAttribute('role','listitem');
+  card.tabIndex=0;
+  card.setAttribute('aria-label',s.label+' screenshot');
+  card.innerHTML=`
+    <div class="thumb" style="background:${s.color}">
+      <span aria-hidden="true">${s.icon}</span>
+      <span class="thumb-label">${s.label}</span>
+    </div>
+    <div class="card-body">
+      <h3>${s.label}</h3>
+      <p>${s.desc}</p>
+    </div>`;
+  card.addEventListener('click',()=>openLightbox(s));
+  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLightbox(s)}});
+  gallery.appendChild(card);
+});
+
+const lb=document.getElementById('lightbox');
+const lbThumb=document.getElementById('lb-thumb');
+const lbTitle=document.getElementById('lb-title');
+const lbDesc=document.getElementById('lb-desc');
+const lbClose=document.getElementById('lb-close');
+function openLightbox(s){
+  lbThumb.style.background=s.color;
+  lbThumb.innerHTML=`<span aria-hidden="true">${s.icon}</span>`;
+  lbTitle.textContent=s.label;
+  lbDesc.textContent=s.desc;
+  lb.classList.add('active');
+  lb.setAttribute('aria-hidden','false');
+  lbClose.focus();
+}
+function closeLightbox(){
+  lb.classList.remove('active');
+  lb.setAttribute('aria-hidden','true');
+}
+lbClose.addEventListener('click',closeLightbox);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLightbox()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('active'))closeLightbox()});
+</script>
+</body>
+</html>

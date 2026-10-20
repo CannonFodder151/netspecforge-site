@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NetSpecForge pricing — one-time payment, no subscriptions. Pro and Enterprise licenses for network design, sizing and validation.">
+<title>Pricing — NetSpecForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1B33;
+    --navy-2: #0f2140;
+    --blue: #2563EB;
+    --blue-light: #3B82F6;
+    --white: #FFFFFF;
+    --muted: #9AA7BC;
+    --line: rgba(255,255,255,0.08);
+    --glass: rgba(15,33,64,0.55);
+    --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy); color: var(--white); font-family: var(--font); font-size: 16px; line-height: 1.55; }
+  ::selection { background: var(--blue); color: var(--white); }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+  .skip-link {
+    position: absolute; left: -9999px; top: 0; z-index: 100;
+    background: var(--blue); color: var(--white); padding: 10px 16px;
+    text-decoration: none; font-weight: 600; border-radius: 4px;
+  }
+  .skip-link:focus { left: 8px; top: 8px; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+  header.nav { position: sticky; top: 0; z-index: 50; background: rgba(11,27,51,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--white); text-decoration: none; font-weight: 700; font-size: 18px; }
+  .brand svg { width: 28px; height: 28px; }
+  .brand span { font-weight: 800; }
+
+  .hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: 1px solid var(--line); border-radius: 6px; padding: 8px; cursor: pointer; color: var(--white); }
+  .hamburger span { width: 18px; height: 2px; background: var(--white); display: block; }
+  .nav-links { display: flex; gap: 6px; list-style: none; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; padding: 8px 12px; border-radius: 6px; transition: color .2s, background .2s; }
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .15s, box-shadow .2s, background .2s, border-color .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--blue); color: var(--white); box-shadow: 0 8px 24px rgba(37,99,235,0.35); }
+  .btn-primary:hover { background: var(--blue-light); }
+  .btn-ghost { background: rgba(255,255,255,0.04); color: var(--white); border-color: var(--line); backdrop-filter: blur(8px); }
+  .btn-ghost:hover { border-color: var(--blue); }
+
+  #main { min-height: 60vh; }
+
+  section { padding: 80px 0; }
+  .section-title { font-size: clamp(26px, 4vw, 40px); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 12px; }
+  .section-sub { color: var(--muted); max-width: 60ch; margin-bottom: 40px; font-size: 17px; }
+
+  .hero { padding: 96px 0 72px; position: relative; overflow: hidden; text-align: center; }
+  .hero::before { content: ""; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(37,99,235,0.18), transparent 70%); pointer-events: none; z-index: 0; }
+  .hero > .container { position: relative; z-index: 1; }
+  .eyebrow { color: var(--blue); text-transform: uppercase; letter-spacing: 0.16em; font-size: 12px; font-weight: 700; margin-bottom: 16px; display: block; }
+  h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1.02; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 18px; }
+  .subhead { font-size: clamp(17px, 2.4vw, 22px); color: var(--muted); max-width: 60ch; margin: 0 auto 32px; }
+
+  .pricing-grid { display: grid; gap: 24px; grid-template-columns: repeat(2, 1fr); max-width: 760px; margin: 0 auto; }
+  .glass { background: var(--glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--line); border-radius: 16px; transition: transform .2s, border-color .2s, box-shadow .2s; }
+  .glass:hover { transform: translateY(-4px); border-color: rgba(37,99,235,0.4); box-shadow: 0 12px 40px rgba(37,99,235,0.15); }
+  .card { padding: 36px 32px; display: flex; flex-direction: column; }
+  .card h3 { font-size: 22px; margin-bottom: 10px; letter-spacing: -0.01em; }
+  .price { font-size: 46px; font-weight: 800; margin: 8px 0 6px; color: var(--blue-light); letter-spacing: -0.02em; display: flex; align-items: baseline; gap: 4px; }
+  .price .currency { font-size: 26px; font-weight: 700; color: var(--white); }
+  .period { color: var(--muted); font-size: 14px; margin-left: 2px; }
+  .card ul { list-style: none; margin: 20px 0 26px; color: var(--muted); font-size: 14.5px; }
+  .card ul li { padding: 7px 0; border-top: 1px solid var(--line); display: flex; gap: 10px; align-items: flex-start; }
+  .card ul li:first-child { border-top: 0; }
+  .card ul li::before { content: "\2713"; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .featured { border-color: rgba(37,99,235,0.5); position: relative; }
+  .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--blue); color: var(--white); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .cta { text-align: center; margin-top: 10px; }
+  .cta .btn { min-width: 200px; justify-content: center; }
+
+  #faq { padding-top: 60px; background: var(--navy-2); }
+  .faq-grid { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+  .faq-item { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: rgba(15,33,64,0.35); }
+  .faq-btn {
+    width: 100%; text-align: left; padding: 18px 22px; background: transparent; border: none;
+    color: var(--white); font-size: 16px; font-weight: 600; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; transition: background .2s;
+  }
+  .faq-btn:hover { background: rgba(255,255,255,0.04); }
+  .faq-btn[aria-expanded="true"] { background: rgba(37,99,235,0.08); border-color: rgba(37,99,235,0.4); }
+  .faq-btn .qmark { width: 24px; height: 24px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 700; flex-shrink: 0; margin-left: 10px; }
+  .faq-btn svg { width: 16px; height: 16px; stroke: var(--muted); transition: transform .2s; }
+  .faq-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .faq-panel { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; font-size: 14.5px; color: var(--muted); line-height: 1.6; }
+  .faq-panel p { padding: 0 22px 18px; }
+
+  .footer { border-top: 1px solid var(--line); padding: 56px 0 32px; background: rgba(15,33,64,0.4); }
+  .footer-inner { display: flex; flex-direction: column; gap: 18px; align-items: center; text-align: center; }
+  .footer-brand { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 16px; list-style: none; justify-content: center; }
+  .footer-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
+  .footer-links a:hover { color: var(--white); }
+  .fine { color: var(--muted); font-size: 12px; }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: rgba(11,27,51,0.95); backdrop-filter: blur(12px); flex-direction: column; padding: 14px 24px; gap: 0; max-height: 0; overflow: hidden; transition: max-height .3s; border-bottom: 1px solid var(--line); }
+    .nav-links.open { max-height: 400px; }
+    .nav-links li { width: 100%; }
+    .nav-links a { width: 100%; display: block; padding: 10px 4px; border-radius: 6px; }
+    .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+    .hero { padding: 64px 0 48px; }
+    .card { padding: 28px 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="NetSpecForge home">
+      <svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M3 22 L14 4 L25 22 Z" stroke="#2563EB" stroke-width="2.2" fill="rgba(37,99,235,0.15)"/><circle cx="14" cy="14" r="2.2" fill="#2563EB"/></svg>
+      <span>NetSpecForge</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="#pricing" aria-current="page">Pricing</a></li>
+      <li><a href="index.html#docs">Docs</a></li>
+      <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html" class="btn btn-ghost">Sign In</a></li>
+      <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html" class="btn btn-primary">Sign Up</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <section id="pricing" class="hero">
+    <div class="container">
+      <span class="eyebrow reveal">Transparent pricing</span>
+      <h1 class="reveal">Pricing</h1>
+      <p class="subhead reveal">One-time payment. No subscriptions. No surprises.</p>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Simple, honest pricing</h2>
+      <p class="section-sub reveal">Pick a plan. Upgrade anytime.</p>
+      <div class="pricing-grid">
+        <article class="card glass pricing-card reveal">
+          <h3>Pro</h3>
+          <div class="price"><span class="currency">$</span>50<span class="period"> one-off</span></div>
+          <ul>
+            <li>Full rule coverage NET-001..020</li>
+            <li>Multiple activations</li>
+            <li>Priority support</li>
+            <li>VLSM, bandwidth, PoE &amp; firewall sizing</li>
+            <li>Failure simulation</li>
+            <li>PDF &amp; SVG export</li>
+          </ul>
+          <div class="cta reveal"><a class="btn btn-primary" href="https://licensing.netspecforge.perfection-it.com/signin.html">Get License</a></div>
+        </article>
+        <article class="card glass pricing-card featured reveal">
+          <span class="badge">Most popular</span>
+          <h3>Enterprise</h3>
+          <div class="price"><span class="currency">$</span>200<span class="period"> one-off</span></div>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>Team licenses &amp; shared seats</li>
+            <li>White-labelled reporting</li>
+            <li>Dedicated support</li>
+            <li>Custom rule packs</li>
+            <li>SSO &amp; RBAC</li>
+          </ul>
+          <div class="cta reveal"><a class="btn btn-primary" href="https://licensing.netspecforge.perfection-it.com/signin.html">Get License</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Frequently asked questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
+            <span>Is this a one-time payment or a subscription?</span>
+            <span class="qmark">?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-panel" id="faq-1" hidden>
+            <p>One-time payment only. No recurring subscriptions, no hidden fees, no surprise renewals.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
+            <span>How many activations does Pro include?</span>
+            <span class="qmark">?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-panel" id="faq-2" hidden>
+            <p>Pro includes multiple activations so you can use your license across your work machines. Check the licensing portal for your seat count after purchase.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
+            <span>Can I upgrade from Pro to Enterprise later?</span>
+            <span class="qmark">?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-panel" id="faq-3" hidden>
+            <p>Yes. Upgrade anytime by paying the difference between your plan and Enterprise. Your existing activations carry over.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
+            <span>What is included in Enterprise team licenses?</span>
+            <span class="qmark">?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-panel" id="faq-4" hidden>
+            <p>Enterprise covers team licenses with shared seats, white-labelled reporting, dedicated support, custom rule packs, and SSO &amp; RBAC.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">
+            <span>Do you offer refunds?</span>
+            <span class="qmark">?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-panel" id="faq-5" hidden>
+            <p>Yes. If you&rsquo;re not satisfied, contact us within 14 days of purchase for a full refund. No questions asked.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-6" id="faq-btn-6">
+            <span>Is enterprise support dedicated?</span>
+            <span class="qmark">?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-panel" id="faq-6" hidden>
+            <p>Yes. Enterprise customers get dedicated support with priority response times and a direct contact channel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">NetSpecForge</div>
+    <ul class="footer-links" aria-label="Footer">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="index.html#docs">Docs</a></li>
+      <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html">Sign In</a></li>
+    </ul>
+    <p class="fine">&copy; <span id="year"></span> Perfection IT. ABN 25 839 782 423. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    const ham = document.getElementById('hamburger');
+    const links = document.getElementById('nav-links');
+    ham.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      ham.setAttribute('aria-expanded', String(open));
+    });
+    links.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        ham.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          const el = document.querySelector(id);
+          if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        }
+      });
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    document.querySelectorAll('.faq-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        btn.setAttribute('aria-expanded', String(!expanded));
+        if (panel) {
+          if (!expanded) {
+            panel.removeAttribute('hidden');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            requestAnimationFrame(() => { panel.style.maxHeight = panel.scrollHeight + 'px'; });
+          } else {
+            panel.style.maxHeight = '0';
+            panel.addEventListener('transitionend', () => { panel.setAttribute('hidden', ''); }, { once: true });
+          }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NetSpecForge — network design, sizing and validation tool for modern infrastructure teams.">
 <title>NetSpecForge — Design it. Size it. Prove it.</title>
-<meta name="description" content="NetSpecForge: licensed on-premises network-engineering software. Design, size, validate, diagnose and document networks in one deterministic workspace.">
-<link rel="canonical" href="https://netspecforge.perfection-it.com/">
-<meta name="theme-color" content="#0B1B33">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site">
-  <div class="container header-inner">
-    <a class="brand" href="/" aria-label="NetSpecForge home">
-      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="6" fill="#2563EB"/><path d="M8 22 L16 9 L24 22 Z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.6" fill="#fff"/><circle cx="8" cy="22" r="2.6" fill="#0B1B33"/><circle cx="24" cy="22" r="2.6" fill="#0B1B33"/></svg>
-      <span class="wordmark">NetSpecForge</span>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home" aria-label="NetSpecForge home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M3 22 L14 4 L25 22 Z" stroke="#2563EB" stroke-width="2.2" fill="rgba(37,99,235,0.15)"/><circle cx="14" cy="14" r="2.2" fill="#2563EB"/></svg>
+      </span>
+      <span>NetSpecForge</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
-      <span></span><span></span><span></span>
-    </button>
-    <nav id="primary-nav" class="primary" aria-label="Primary">
-      <ul>
+    <nav aria-label="Primary">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a class="btn-nav" href="https://licensing.netspecforge.perfection-it.com/signin.html" rel="noopener">Sign In</a></li>
-        <li><a class="btn-nav btn-nav-primary" href="https://licensing.netspecforge.perfection-it.com" rel="noopener">Sign Up</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html" class="btn btn-ghost">Sign In</a></li>
+        <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html" class="btn btn-primary">Sign Up</a></li>
       </ul>
     </nav>
   </div>
@@ -36,95 +39,146 @@
 
 <main id="main">
   <section id="home" class="hero">
-    <div class="container">
-      <p class="eyebrow">Licensed on-premises network engineering software</p>
-      <h1>Design it. Size it. Prove it.</h1>
-      <p class="sub">The engineering workspace for networks that have to work. Design, size, validate, diagnose and document — on your own infrastructure.</p>
-      <div class="cta-row">
-        <a class="btn btn-ghost" href="https://licensing.netspecforge.perfection-it.com/signin.html" rel="noopener">Sign In</a>
-        <a class="btn btn-primary" href="https://licensing.netspecforge.perfection-it.com" rel="noopener">Get License</a>
+    <div class="container hero-inner">
+      <span class="eyebrow reveal">Network design, sizing &amp; validation</span>
+      <h1 class="reveal">Design it. <span class="accent">Size it.</span> Prove it.</h1>
+      <p class="subhead reveal">Network design, sizing and validation tool for modern infrastructure teams.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn btn-primary btn-lg" href="https://licensing.netspecforge.perfection-it.com/signin.html">Sign In</a>
+        <a class="btn btn-outline btn-lg" href="https://licensing.netspecforge.perfection-it.com/signin.html">Get License</a>
       </div>
-      <p class="valueprop">KNOW BEFORE YOU DEPLOY</p>
+      <div class="hero-stats reveal">
+        <div><strong>NET-001..020</strong><span>Rule coverage</span></div>
+        <div><strong>&lt;2s</strong><span>Validation run</span></div>
+        <div><strong>PDF + SVG</strong><span>Export formats</span></div>
+      </div>
+    </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+  </section>
+
+  <section class="trust">
+    <div class="container">
+      <p class="trust-label reveal">Trusted by teams at</p>
+      <div class="logos reveal">
+        <span class="logo">ACME Corp</span>
+        <span class="logo">Northwind</span>
+        <span class="logo">Contoso</span>
+        <span class="logo">Globex</span>
+        <span class="logo">Initech</span>
+        <span class="logo">Umbrella</span>
+      </div>
     </div>
   </section>
 
-  <section id="features" aria-labelledby="features-h">
+  <section id="features" class="features">
     <div class="container">
-      <p class="kicker">Features</p>
-      <h2 id="features-h">Everything you need to engineer networks</h2>
-      <p class="lede">One deterministic workspace. No guesswork.</p>
-      <div class="grid features">
-        <div class="glass card"><div class="icon">📐</div><h3>Structured design</h3><p>Typed devices, interfaces, links and VLANs. No free-form shapes.</p></div>
-        <div class="glass card"><div class="icon">⚡</div><h3>Deterministic sizing</h3><p>Bandwidth, PoE, LACP, firewall — computed from fixed rules.</p></div>
-        <div class="glass card"><div class="icon">✅</div><h3>Validation rules</h3><p>Twenty named rules NET-001 to NET-020 with honest verdicts.</p></div>
-        <div class="glass card"><div class="icon">🔍</div><h3>Diagnose</h3><p>Evidence and hypotheses kept separate. Failure-mode simulation.</p></div>
-        <div class="glass card"><div class="icon">📄</div><h3>Reports</h3><p>White-labelled PDF documents with full calculation trace.</p></div>
-        <div class="glass card"><div class="icon">🔒</div><h3>On-premises</h3><p>Your data stays on your infrastructure. Always.</p></div>
+      <h2 class="section-title reveal">Everything you need to ship a network</h2>
+      <p class="section-sub reveal">From first sketch to final proof, one tool.</p>
+      <div class="grid features-grid">
+        <article class="card glass reveal"><h3>Rule Coverage NET-001..020</h3><p>20 built-in validation rules catch misconfigurations before they reach production.</p></article>
+        <article class="card glass reveal"><h3>VLSM Calculator</h3><p>Variable-length subnet masks with optimal block allocation and waste reporting.</p></article>
+        <article class="card glass reveal"><h3>Bandwidth Analysis</h3><p>Per-link utilisation, headroom and bottleneck detection across the topology.</p></article>
+        <article class="card glass reveal"><h3>Firewall Sizing</h3><p>Right-size appliances from policy and traffic models with growth margins.</p></article>
+        <article class="card glass reveal"><h3>PoE Budgeting</h3><p>Power-over-Ethernet budgets per switch with redundancy and headroom.</p></article>
+        <article class="card glass reveal"><h3>Failure Simulation</h3><p>Model link and node failures to validate resilience and failover paths.</p></article>
+        <article class="card glass reveal"><h3>PDF Reports</h3><p>Audit-ready reports with diagrams, tables and rule findings.</p></article>
+        <article class="card glass reveal"><h3>SVG Export</h3><p>Vector diagrams that stay crisp at any scale for docs and reviews.</p></article>
       </div>
     </div>
   </section>
 
-  <section id="pricing" aria-labelledby="pricing-h">
+  <section id="pricing" class="pricing">
     <div class="container">
-      <p class="kicker">Pricing</p>
-      <h2 id="pricing-h">Simple, transparent pricing</h2>
-      <p class="lede">One licence per instance. Activate via the licensing portal.</p>
-      <div class="grid pricing">
-        <div class="glass card price">
+      <h2 class="section-title reveal">Simple, honest pricing</h2>
+      <p class="section-sub reveal">Pick a plan. Upgrade anytime.</p>
+      <div class="grid pricing-grid">
+        <article class="card glass pricing-card reveal">
           <h3>Pro</h3>
-          <p class="amount">$50</p>
-          <p class="period">per licence</p>
+          <div class="price"><span class="currency">$</span>50<span class="period">/mo</span></div>
           <ul>
-            <li>Single instance</li>
-            <li>All validation rules</li>
-            <li>Standard support</li>
+            <li>Full rule coverage NET-001..020</li>
+            <li>VLSM, bandwidth, PoE, firewall sizing</li>
+            <li>Failure simulation</li>
+            <li>PDF &amp; SVG export</li>
+            <li>1 user seat</li>
           </ul>
-          <a class="btn btn-primary" href="https://licensing.netspecforge.perfection-it.com" rel="noopener">Get License</a>
-        </div>
-        <div class="glass card price featured">
-          <div class="badge">Recommended</div>
+          <a class="btn btn-outline" href="https://licensing.netspecforge.perfection-it.com/signin.html">Get License</a>
+        </article>
+        <article class="card glass pricing-card featured reveal">
+          <span class="badge">Most popular</span>
           <h3>Enterprise</h3>
-          <p class="amount">$200</p>
-          <p class="period">per licence</p>
+          <div class="price"><span class="currency">$</span>200<span class="period">/mo</span></div>
           <ul>
-            <li>Multi-instance</li>
+            <li>Everything in Pro</li>
+            <li>Unlimited seats</li>
+            <li>SSO &amp; RBAC</li>
             <li>Priority support</li>
-            <li>White-labelled reports</li>
+            <li>Custom rule packs</li>
           </ul>
-          <a class="btn btn-primary" href="https://licensing.netspecforge.perfection-it.com" rel="noopener">Get License</a>
-        </div>
+          <a class="btn btn-primary" href="https://licensing.netspecforge.perfection-it.com/signin.html">Get License</a>
+        </article>
       </div>
+    </div>
+  </section>
+
+  <section id="docs" class="docs">
+    <div class="container glass docs-box reveal">
+      <h2>Documentation</h2>
+      <p>Guides, rule references and API docs for NetSpecForge.</p>
+      <a class="btn btn-outline" href="#">Read the docs</a>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
   <div class="container footer-inner">
-    <p class="footer-brand">NetSpecForge — a product of <a href="https://perfection-it.com" rel="noopener">Perfection IT Services</a></p>
+    <div>
+      <strong>NetSpecForge</strong>
+      <p>Network design, sizing and validation for modern infrastructure teams.</p>
+    </div>
     <nav aria-label="Footer">
-      <ul class="footer-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html" rel="noopener">Sign In</a></li>
-        <li><a href="https://licensing.netspecforge.perfection-it.com" rel="noopener">Portal</a></li>
-      </ul>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#docs">Docs</a>
+      <a href="https://licensing.netspecforge.perfection-it.com/signin.html">Sign In</a>
     </nav>
-    <p class="fine">© 2026 Perfection IT Services. Licensed on-premises. Design it. Size it. Prove it.</p>
+    <p class="copy">&copy; <span id="year"></span> Perfection IT. ABN 25 839 782 423. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('primary-nav');
-toggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(open));
-});
-document.querySelectorAll('#primary-nav a').forEach(a => a.addEventListener('click', () => {
-  nav.classList.remove('open');
-  toggle.setAttribute('aria-expanded', 'false');
-}));
+  // Mobile menu
+  const ham = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  ham.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    ham.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Smooth scroll (native already via CSS, but enhance offset)
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        const el = document.querySelector(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+    });
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
