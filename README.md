@@ -4,8 +4,8 @@ Static marketing site for NetSpecForge, licensed on-premises network-engineering
 software (design, size, validate, diagnose, document) — a product of
 Perfection IT Services (https://perfection-it.com, ABN 25 839 782 423).
 
-Zero build step. Zero npm dependencies. Zero external requests (no fonts, no CDN
-JS, no external images) — the site loads instantly and works offline once served.
+Zero build step. Zero npm dependencies. Google Fonts (Inter) for typography,
+vanilla JS only — the site loads instantly and works offline once served.
 
 ## Files
 

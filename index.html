@@ -15,7 +15,7 @@
 
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="#home" aria-label="NetSpecForge home">
+    <a class="brand" href="index.html" aria-label="NetSpecForge home">
       <span class="brand-mark" aria-hidden="true">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M3 22 L14 4 L25 22 Z" stroke="#2563EB" stroke-width="2.2" fill="rgba(37,99,235,0.15)"/><circle cx="14" cy="14" r="2.2" fill="#2563EB"/></svg>
       </span>
@@ -26,12 +26,12 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#docs">Docs</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#docs">Docs</a></li>
         <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html" class="btn btn-ghost">Sign In</a></li>
-        <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html" class="btn btn-primary">Sign Up</a></li>
+        <li><a href="https://licensing.netspecforge.perfection-it.com/register.html" class="btn btn-primary">Sign Up</a></li>
       </ul>
     </nav>
   </div>
@@ -94,7 +94,7 @@
       <div class="grid pricing-grid">
         <article class="card glass pricing-card reveal">
           <h3>Pro</h3>
-          <div class="price"><span class="currency">$</span>50<span class="period">/mo</span></div>
+          <div class="price"><span class="currency">$</span>50<span class="period"> one-off</span></div>
           <ul>
             <li>Full rule coverage NET-001..020</li>
             <li>VLSM, bandwidth, PoE, firewall sizing</li>
@@ -107,7 +107,7 @@
         <article class="card glass pricing-card featured reveal">
           <span class="badge">Most popular</span>
           <h3>Enterprise</h3>
-          <div class="price"><span class="currency">$</span>200<span class="period">/mo</span></div>
+          <div class="price"><span class="currency">$</span>200<span class="period"> one-off</span></div>
           <ul>
             <li>Everything in Pro</li>
             <li>Unlimited seats</li>
@@ -125,7 +125,7 @@
     <div class="container glass docs-box reveal">
       <h2>Documentation</h2>
       <p>Guides, rule references and API docs for NetSpecForge.</p>
-      <a class="btn btn-outline" href="#">Read the docs</a>
+      <a class="btn btn-outline" href="docs.html">Read the docs</a>
     </div>
   </section>
 </main>
@@ -137,10 +137,10 @@
       <p>Network design, sizing and validation for modern infrastructure teams.</p>
     </div>
     <nav aria-label="Footer">
-      <a href="#home">Home</a>
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#docs">Docs</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#docs">Docs</a>
       <a href="https://licensing.netspecforge.perfection-it.com/signin.html">Sign In</a>
     </nav>
     <p class="copy">&copy; <span id="year"></span> Perfection IT. ABN 25 839 782 423. All rights reserved.</p>
@@ -151,12 +151,15 @@
   // Mobile menu
   const ham = document.getElementById('hamburger');
   const links = document.getElementById('nav-links');
+  const nav = document.querySelector('.nav');
   ham.addEventListener('click', () => {
     const open = links.classList.toggle('open');
+    nav.classList.toggle('open', open);
     ham.setAttribute('aria-expanded', String(open));
   });
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     links.classList.remove('open');
+    nav.classList.remove('open');
     ham.setAttribute('aria-expanded', 'false');
   }));
 
@@ -176,7 +179,7 @@
 
   // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
