@@ -64,3 +64,5 @@ if you want a different one.
   download URLs or version numbers exist anywhere in the site.
 - Status colours are always paired with a text label (PASS / WARNING / FAIL /
   INSUFFICIENT DATA), consistent with the product's own validation rules.
+
+<!-- verification: redeploy trigger -->
