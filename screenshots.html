@@ -45,9 +45,19 @@
 <main id="main">
   <section class="gallery-section" aria-labelledby="gallery-heading">
     <h2 id="gallery-heading" class="sr-only">Screenshot gallery</h2>
+    <img src="images/landing.png" alt="NetSpecForge landing" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/customers.png" alt="NetSpecForge customers" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/sites.png" alt="NetSpecForge sites" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/projects.png" alt="NetSpecForge projects" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/designs.png" alt="NetSpecForge designs" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
     <img src="images/workspace.png" alt="NetSpecForge workspace" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
-    <img src="images/reports.png" alt="NetSpecForge reports" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
     <img src="images/hardware.png" alt="NetSpecForge hardware" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/reports.png" alt="NetSpecForge reports" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/templates.png" alt="NetSpecForge templates" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/calculators.png" alt="NetSpecForge calculators" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/team.png" alt="NetSpecForge team" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/licence.png" alt="NetSpecForge licence" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
+    <img src="images/settings.png" alt="NetSpecForge settings" style="width:100%;max-width:900px;display:block;margin:0 auto 16px;border-radius:8px">
     <div class="gallery-grid" id="gallery" role="list"></div>
   </section>
 </main>
@@ -82,18 +92,19 @@
 
 <script>
 const shots=[
-  {label:"Dashboard",icon:"📊",desc:"Overview of projects, recent activity, and key metrics.",color:"linear-gradient(135deg,#1e3a8a,#2563EB)"},
-  {label:"Topology Canvas",icon:"🗺️",desc:"Interactive network topology editor with drag-and-drop nodes.",color:"linear-gradient(135deg,#0f766e,#14b8a6)"},
-  {label:"Validation Panel",icon:"✅",desc:"Real-time validation results with rule-by-rule breakdown.",color:"linear-gradient(135deg,#7c3aed,#a78bfa)"},
-  {label:"Inspector",icon:"🔍",desc:"Detailed property inspector for selected network elements.",color:"linear-gradient(135deg,#b45309,#f59e0b)"},
-  {label:"Hardware Library",icon:"🛠️",desc:"Searchable catalog of supported hardware and modules.",color:"linear-gradient(135deg,#0e7490,#22d3ee)"},
-  {label:"Reports",icon:"📄",desc:"Generate compliance and specification reports in one click.",color:"linear-gradient(135deg,#be123c,#f43f5e)"},
-  {label:"Calculators",icon:"🧮",desc:"Built-in engineering calculators for capacity and sizing.",color:"linear-gradient(135deg,#3f6212,#84cc16)"},
-  {label:"Settings",icon:"⚙️",desc:"Workspace, profile, and integration settings.",color:"linear-gradient(135deg,#475569,#94a3b8)"},
-  {label:"License Page",icon:"🔑",desc:"Manage license keys and activation status.",color:"linear-gradient(135deg,#7e22ce,#c084fc)"},
-  {label:"Team Page",icon:"👥",desc:"Invite members, assign roles, and manage permissions.",color:"linear-gradient(135deg,#1d4ed8,#60a5fa)"},
-  {label:"Workspace",icon:"🗂️",desc:"Project workspace with files, branches, and history.",color:"linear-gradient(135deg,#92400e,#fbbf24)"},
-  {label:"Design Page",icon:"🎨",desc:"Visual design surface for customizing templates.",color:"linear-gradient(135deg,#9d174d,#ec4899)"}
+  {label:"Landing",img:"images/landing.png",desc:"Overview of projects, recent activity, and key metrics.",color:"linear-gradient(135deg,#1e3a8a,#2563EB)"},
+  {label:"Customers",img:"images/customers.png",desc:"Customer registry with Melbourne HQ sample data.",color:"linear-gradient(135deg,#0f766e,#14b8a6)"},
+  {label:"Sites",img:"images/sites.png",desc:"Site hierarchy with Melbourne HQ network refresh.",color:"linear-gradient(135deg,#7c3aed,#a78bfa)"},
+  {label:"Projects",img:"images/projects.png",desc:"Project list with active Melbourne HQ Network Refresh.",color:"linear-gradient(135deg,#b45309,#f59e0b)"},
+  {label:"Designs",img:"images/designs.png",desc:"Design surface with Option A edge refresh.",color:"linear-gradient(135deg,#0e7490,#22d3ee)"},
+  {label:"Workspace",img:"images/workspace.png",desc:"Interactive network topology editor with drag-and-drop nodes.",color:"linear-gradient(135deg,#be123c,#f43f5e)"},
+  {label:"Hardware Library",img:"images/hardware.png",desc:"Searchable catalog of supported hardware and modules.",color:"linear-gradient(135deg,#3f6212,#84cc16)"},
+  {label:"Reports",img:"images/reports.png",desc:"Generate compliance and specification reports in one click.",color:"linear-gradient(135deg,#475569,#94a3b8)"},
+  {label:"Templates",img:"images/templates.png",desc:"Reusable network design templates and scenarios.",color:"linear-gradient(135deg,#7e22ce,#c084fc)"},
+  {label:"Calculators",img:"images/calculators.png",desc:"Built-in engineering calculators for capacity and sizing.",color:"linear-gradient(135deg,#1d4ed8,#60a5fa)"},
+  {label:"Team",img:"images/team.png",desc:"Invite members, assign roles, and manage permissions.",color:"linear-gradient(135deg,#92400e,#fbbf24)"},
+  {label:"Licence",img:"images/licence.png",desc:"Manage license keys and activation status.",color:"linear-gradient(135deg,#9d174d,#ec4899)"},
+  {label:"Settings",img:"images/settings.png",desc:"Workspace, profile, and integration settings.",color:"linear-gradient(135deg,#1e3a8a,#2563EB)"}
 ];
 
 const gallery=document.getElementById('gallery');
@@ -105,8 +116,7 @@ shots.forEach((s)=>{
   card.setAttribute('aria-label',s.label+' screenshot');
   card.innerHTML=`
     <div class="thumb" style="background:${s.color}">
-      <span aria-hidden="true">${s.icon}</span>
-      <span class="thumb-label">${s.label}</span>
+      ${s.img ? `<img src="${s.img}" alt="${s.label}" style="width:100%;height:100%;object-fit:cover;display:block">` : `<span aria-hidden="true">${s.icon||""}</span>`}
     </div>
     <div class="card-body">
       <h3>${s.label}</h3>
