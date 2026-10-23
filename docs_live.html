@@ -1,0 +1,292 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Learn how to design, size and validate networks with NetSpecForge. Getting started, validation rules NET-001..020, calculators, reports, license activation, troubleshooting.">
+<title>Documentation | NetSpecForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="NetSpecForge home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M3 22 L14 4 L25 22 Z" stroke="#2563EB" stroke-width="2.2" fill="rgba(37,99,235,0.15)"/><circle cx="14" cy="14" r="2.2" fill="#2563EB"/></svg>
+      </span>
+      <span>NetSpecForge</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="docs.html" aria-current="page">Docs</a></li>
+      <li><a href="https://licensing.netspecforge.perfection-it.com/signin.html" class="btn btn-ghost">Sign In</a></li>
+      <li><a href="https://licensing.netspecforge.perfection-it.com/register.html" class="btn btn-primary">Sign Up</a></li>
+    </ul>
+  </div>
+</header>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <h1>Documentation</h1>
+    <p>Learn how to design, size and validate with NetSpecForge.</p>
+  </div>
+  <div class="hero-glow" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+  <section id="getting-started" class="section">
+    <div class="container">
+      <h2>Getting Started</h2>
+      <p class="section-sub">Create a project, add devices, and build your topology.</p>
+      <div class="glass">
+        <div class="step-grid">
+          <article class="step">
+            <span class="num">1</span>
+            <h4>Create a project</h4>
+            <p>Open NetSpecForge, select <kbd>New Project</kbd>, enter a name and choose a template (Enterprise, Campus, or Datacenter).</p>
+          </article>
+          <article class="step">
+            <span class="num">2</span>
+            <h4>Add devices</h4>
+            <p>Drag switches, routers, firewalls, and access points from the device library onto the canvas. Set VLANs, ports, and PoE requirements per device.</p>
+          </article>
+          <article class="step">
+            <span class="num">3</span>
+            <h4>Build topology</h4>
+            <p>Connect devices with links. Assign link speeds (1G, 10G, 25G, 100G), then run the topology checker to validate cabling and addressing.</p>
+          </article>
+        </div>
+        <img src="images/workspace.png" alt="NetSpecForge workspace" style="width:100%;border-radius:8px;margin-top:12px">
+        <div class="note">Tip: Use the built-in <kbd>Auto-address</kbd> tool to assign subnets automatically before validation.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="running-validation" class="section">
+    <div class="container">
+      <h2>Running Validation</h2>
+      <p class="section-sub">Run the built-in NET-001..020 rule set against your topology.</p>
+      <div class="glass">
+        <div class="step-grid">
+          <article class="step">
+            <span class="num">1</span>
+            <h4>Open validation</h4>
+            <p>Select <kbd>Validate</kbd> from the toolbar or press <kbd>Ctrl</kbd>+<kbd>R</kbd>. Choose the rule pack (default: <span class="kbd">NET-001..020</span>).</p>
+          </article>
+          <article class="step">
+            <span class="num">2</span>
+            <h4>Run the rules</h4>
+            <p>Click <kbd>Run</kbd>. NetSpecForge checks addressing, VLAN consistency, spanning-tree, PoE budget, bandwidth headroom, and firewall policy.</p>
+          </article>
+          <article class="step">
+            <span class="num">3</span>
+            <h4>Review findings</h4>
+            <p>Each finding shows severity, rule ID, affected device, and a suggested fix. Filter by <span class="kbd">Pass / Warn / Fail</span> or jump to a device on the canvas.</p>
+          </article>
+        </div>
+        <img src="images/hardware.png" alt="NetSpecForge validation" style="width:100%;border-radius:8px;margin-top:12px">
+        <div class="note warn-box">Rule coverage spans NET-001 (addressing) through NET-020 (failover). Warnings do not block export; failures do.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculators" class="section">
+    <div class="container">
+      <h2>Calculators</h2>
+      <p class="section-sub">Subnet, bandwidth, PoE, and firewall sizing tools.</p>
+      <div class="glass">
+        <div class="step-grid">
+          <article class="step">
+            <span class="num">1</span>
+            <h4>Subnet / VLSM</h4>
+            <p>Enter a network and required host counts per subnet. Get optimal block allocation, wasted addresses, and summarization.</p>
+          </article>
+          <article class="step">
+            <span class="num">2</span>
+            <h4>Bandwidth</h4>
+            <p>Model per-link utilisation and headroom. Detect bottlenecks and oversubscribed links before they affect production.</p>
+          </article>
+          <article class="step">
+            <span class="num">3</span>
+            <h4>PoE budget</h4>
+            <p>Calculate power per switch port with redundancy margins. See headroom and overload warnings per device.</p>
+          </article>
+          <article class="step">
+            <span class="num">4</span>
+            <h4>Firewall sizing</h4>
+            <p>Right-size appliances from policy count, traffic model, and growth margin. Outputs recommended model and rule capacity.</p>
+          </article>
+        </div>
+        <img src="images/calculators.png" alt="NetSpecForge calculators" style="width:100%;border-radius:8px;margin-top:12px">
+        <div class="note">All calculators accept CLI flags, JSON input, or the GUI panels under <kbd>Tools &gt; Calculators</kbd>.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reports" class="section">
+    <div class="container">
+      <h2>Reports</h2>
+      <p class="section-sub">Generate audit-ready PDF reports and export SVG diagrams.</p>
+      <div class="glass">
+        <div class="step-grid">
+          <article class="step">
+            <span class="num">1</span>
+            <h4>Generate PDF</h4>
+            <p>Open <kbd>Reports</kbd>, select <kbd>PDF</kbd>, choose sections (topology, validation findings, calculator outputs), then click <kbd>Export</kbd>.</p>
+          </article>
+          <article class="step">
+            <span class="num">2</span>
+            <h4>Export SVG</h4>
+            <p>Select <kbd>SVG</kbd> to export a vector diagram. Crisp at any scale, suitable for architecture docs and design reviews.</p>
+          </article>
+          <article class="step">
+            <span class="num">3</span>
+            <h4>Schedule / automate</h4>
+            <p>Use the CLI to generate reports on a schedule or as part of a CI pipeline.</p>
+          </article>
+        </div>
+        <img src="images/reports.png" alt="NetSpecForge reports" style="width:100%;border-radius:8px;margin-top:12px">
+        <div class="note">PDF reports include rule findings with severity badges, making them audit-ready for compliance reviews.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="license-activation" class="section">
+    <div class="container">
+      <h2>License Activation</h2>
+      <p class="section-sub">Activate a license key to unlock Pro or Enterprise features.</p>
+      <div class="glass">
+        <div class="step-grid">
+          <article class="step">
+            <span class="num">1</span>
+            <h4>Get a key</h4>
+            <p>Purchase a license at the licensing portal and copy your activation key from the order confirmation email.</p>
+          </article>
+          <article class="step">
+            <span class="num">2</span>
+            <h4>Open activation</h4>
+            <p>In NetSpecForge go to <kbd>Settings &gt; License</kbd> or click <kbd>Activate License</kbd> on the welcome screen.</p>
+          </article>
+          <article class="step">
+            <span class="num">3</span>
+            <h4>Activate</h4>
+            <p>Paste the key and click <kbd>Activate</kbd>. The product verifies the key online and unlocks your entitled tier.</p>
+          </article>
+        </div>
+        <img src="images/settings.png" alt="NetSpecForge settings" style="width:100%;border-radius:8px;margin-top:12px">
+        <div class="note">Keys are tied to your organisation. Deactivate before moving to a new machine: <kbd>netspecforge license deactivate</kbd>.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="troubleshooting" class="section">
+    <div class="container">
+      <h2>Troubleshooting</h2>
+      <p class="section-sub">Common issues and fixes.</p>
+      <div class="glass">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Validation rules not running</td>
+              <td>Ensure a topology exists and devices have IP/VLAN config. Run <kbd>Auto-address</kbd> first.</td>
+            </tr>
+            <tr>
+              <td>PDF export fails</td>
+              <td>Check you have write permission to the output folder, or reduce report sections and retry.</td>
+            </tr>
+            <tr>
+              <td>License key rejected</td>
+              <td>Verify the key matches your purchased tier and has not been activated on another machine. Deactivate elsewhere first.</td>
+            </tr>
+            <tr>
+              <td>PoE over-budget warning</td>
+              <td>Reduce PoE device count, add a higher-capacity switch, or enable redundant power supplies for headroom.</td>
+            </tr>
+            <tr>
+              <td>Link shows as down</td>
+              <td>Confirm link speed/duplex match on both ends and that the cable type supports the distance.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note warn-box mt-16">Still stuck? Export your topology (<kbd>SVG</kbd>) and validation JSON, then attach them to a support ticket at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9babcb9b9a6bbbd89a7acbdbab9acaaafa6bbaeace7aaa6a4">[email&#160;protected]</a>.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>NetSpecForge</strong>
+      <p>Network design, sizing and validation for modern infrastructure teams.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="docs.html" aria-current="page">Docs</a>
+      <a href="https://licensing.netspecforge.perfection-it.com/signin.html">Sign In</a>
+    </nav>
+    <p class="copy">&copy; <span id="year"></span> Perfection IT. ABN 25 839 782 423. All rights reserved.</p>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const ham = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  const nav = document.querySelector('.nav');
+  if (ham && links) {
+    ham.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      nav.classList.toggle('open', open);
+      ham.setAttribute('aria-expanded', String(open));
+    });
+    links.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        nav.classList.remove('open');
+        ham.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function copyCode(id) {
+    const block = document.getElementById(id);
+    const text = block.querySelector('pre').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = block.querySelector('.copy-btn');
+      const old = btn.textContent;
+      btn.textContent = 'Copied';
+      setTimeout(() => { btn.textContent = old; }, 1600);
+    });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        const el = document.querySelector(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+    });
+  });
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"264ba7a871bf460d8994c1c0d2b04d4f","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+
